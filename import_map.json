@@ -12,6 +12,7 @@
       "react-dom": "npm:react-dom@18",
       "react-dom/client": "npm:react-dom@18/client",
       "react/jsx-runtime": "npm:react@18/jsx-runtime",
-      "@types/react": "npm:@types/react@18"
+      "@types/react": "npm:@types/react@18",
+      "@deno/emit": "jsr:@deno/emit@^0.46.0"
     }
   }

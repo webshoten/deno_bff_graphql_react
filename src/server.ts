@@ -74,73 +74,28 @@ const watchSchemaFile = async () => {
 // バックグラウンドでファイル監視を開始
 watchSchemaFile();
 
-// TypeScriptファイル（.ts, .tsx）をJavaScriptに変換して配信（deno bundle使用）
-const bundleTypeScript = async (filePath: string) => {
-  try {
-    const absolutePath = await Deno.realPath(filePath);
-    const command = new Deno.Command(Deno.execPath(), {
-      args: ["bundle", "--import-map", "import_map.json", absolutePath],
-      stdout: "piped",
-      stderr: "piped",
-      cwd: Deno.cwd(),
-    });
-
-    const { code, stdout, stderr } = await command.output();
-
-    if (code !== 0) {
-      const errorText = new TextDecoder().decode(stderr);
-      console.error(`Error bundling ${filePath}:`, errorText);
-      return new Response(`Error bundling TypeScript: ${errorText}`, { 
-        status: 500,
-        headers: { "Content-Type": "text/plain; charset=utf-8" }
-      });
-    }
-
-    const bundledCode = new TextDecoder().decode(stdout);
-    return new Response(bundledCode, {
-      status: 200,
-      headers: { "Content-Type": "application/javascript; charset=utf-8" },
-    });
-  } catch (error) {
-    const errorMessage = error instanceof Error ? error.message : String(error);
-    console.error(`Error bundling ${filePath}:`, errorMessage);
-    return new Response(`Error: ${errorMessage}`, { status: 500 });
-  }
-};
-
 // GraphQLエンドポイント（最初に定義）
 app.all("/graphql", (c) => {
   return yoga.fetch(c.req.raw);
 });
 
-// TypeScriptファイルの処理（静的ファイル配信より前に）
+// 静的ファイル配信（dist/を優先、次にpublic/）
 app.use("/*", async (c, next) => {
-  const pathname = new URL(c.req.url).pathname;
+  const path = c.req.path;
   
-  if (pathname.endsWith(".ts") || pathname.endsWith(".tsx")) {
-    const filePath = `./public${pathname}`;
-    try {
-      await Deno.stat(filePath);
-      return await bundleTypeScript(filePath);
-    } catch {
-      return c.text(`File not found: ${filePath}`, 404);
-    }
-  }
-  
-  return await next();
-});
-
-// 静的ファイル配信
-app.use("/*", serveStatic({ root: "./public" }));
-
-// ルートパス `/` でindex.htmlを返す
-app.get("/", async (c) => {
+  // dist/から配信を試みる
   try {
-    const html = await Deno.readTextFile("./public/index.html");
-    return c.html(html);
+    const distPath = `./dist${path}`;
+    const stat = await Deno.stat(distPath);
+    if (stat.isFile) {
+      return serveStatic({ root: "./dist" })(c, next);
+    }
   } catch {
-    return c.text("HTML file not found", 404);
+    // dist/にない場合はpublic/から配信
   }
+  
+  // public/から配信
+  return serveStatic({ root: "./public" })(c, next);
 });
 
 console.log("🚀 Deno 2.5 GraphQL listening: http://localhost:4000/graphql");
