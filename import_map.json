@@ -1,0 +1,7 @@
+{
+    "imports": {
+      "@pothos/core": "npm:@pothos/core",
+      "graphql-yoga": "npm:graphql-yoga",
+      "@graphql-tools/schema": "npm:@graphql-tools/schema"
+    }
+  }
