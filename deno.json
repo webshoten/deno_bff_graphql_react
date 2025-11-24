@@ -1,9 +1,13 @@
 {
     "importMap": "import_map.json",
     "tasks": {
-      "dev": "deno run --allow-net src/server.ts"
+      "dev": "deno run --allow-net --allow-read --allow-run --allow-env src/server.ts",
+      "generate-schema": "deno run --allow-read --allow-write --allow-env src/generate-schema.ts",
+      "generate-genql": "deno run --allow-read --allow-write --allow-run --allow-env src/generate-genql.ts"
     },
     "compilerOptions": {
-      "strict": true
+      "strict": true,
+      "jsx": "react-jsx",
+      "jsxImportSource": "react"
     }
   }
