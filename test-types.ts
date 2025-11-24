@@ -21,14 +21,16 @@ type TestQueryResult = QueryResult<UsersQuery>;
 // Tは QueryResult<UsersQuery> になるはず
 
 // 3. 実際の型を確認するための変数
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const testQueryResult: TestQueryResult = {} as any;
 const testUsers = testQueryResult.users;
 // testUsersの型を確認
 
 // 4. UseQueryResponseの型を確認
 type TestUseQueryResponse = UseQueryResponse<TestQueryResult>;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const testResponse: TestUseQueryResponse = {} as any;
-const testData = testResponse.data;
+const _testData = testResponse.data;
 // testDataの型を確認
 
 export type {
