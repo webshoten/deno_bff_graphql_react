@@ -15,7 +15,7 @@ on:
     branches: ["main"]
 
 permissions:
-  contents: write  # ビルド済みファイルをコミットするために必要
+  contents: write # ビルド済みファイルをコミットするために必要
 
 jobs:
   test:
@@ -41,6 +41,8 @@ jobs:
       #   run: deno test -A
 
       - name: Build
+        env:
+          DENO_ENV: production
         run: deno task build
 
       - name: Commit build artifacts
@@ -51,4 +53,3 @@ jobs:
           git add -f dist/
           git diff --staged --quiet || git commit -m "chore: build dist files [skip ci]"
           git push
-

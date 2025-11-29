@@ -2,5 +2,28 @@
     "deno.enable": true,
     "deno.importMap": "./import_map.json",
     "deno.lint": true,
-    "deno.unstable": false
+    "deno.unstable": false,
+    "deno.formatOnSave": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "denoland.vscode-deno",
+    "[typescript]": {
+        "editor.defaultFormatter": "denoland.vscode-deno",
+        "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "denoland.vscode-deno",
+        "editor.formatOnSave": true
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "denoland.vscode-deno",
+        "editor.formatOnSave": true
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "denoland.vscode-deno",
+        "editor.formatOnSave": true
+    },
+    "[json]": {
+        "editor.defaultFormatter": "denoland.vscode-deno",
+        "editor.formatOnSave": true
+    }
 }
