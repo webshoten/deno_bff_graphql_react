@@ -33,6 +33,8 @@ async function watchAndBuild() {
     "./public/main.tsx",
     "./public/App.tsx",
     "./public/utils",
+    "./public/components",
+    "./public/generated/genql",
   ];
 
   console.log("📁 ファイル監視を開始しました");

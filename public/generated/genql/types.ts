@@ -1,7 +1,7 @@
 export default {
     "scalars": [
         1,
-        3,
+        2,
         5,
         7
     ],
@@ -16,17 +16,27 @@ export default {
                     ]
                 }
             ],
+            "deleteUser": [
+                6,
+                {
+                    "id": [
+                        2,
+                        "ID!"
+                    ]
+                }
+            ],
             "__typename": [
                 1
             ]
         },
         "String": {},
+        "ID": {},
         "Post": {
             "content": [
                 1
             ],
             "id": [
-                3
+                2
             ],
             "title": [
                 1
@@ -35,13 +45,12 @@ export default {
                 1
             ]
         },
-        "ID": {},
         "Query": {
             "post": [
-                2,
+                3,
                 {
                     "id": [
-                        3,
+                        2,
                         "ID!"
                     ]
                 }
@@ -50,13 +59,13 @@ export default {
                 5
             ],
             "posts": [
-                2
+                3
             ],
             "user": [
                 6,
                 {
                     "id": [
-                        3,
+                        2,
                         "ID!"
                     ]
                 }
@@ -74,7 +83,7 @@ export default {
         "Int": {},
         "User": {
             "id": [
-                3
+                2
             ],
             "name": [
                 1

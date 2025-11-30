@@ -11,6 +11,7 @@ export type Scalars = {
 
 export interface Mutation {
     createUser: (User | null)
+    deleteUser: (User | null)
     __typename: 'Mutation'
 }
 
@@ -39,6 +40,7 @@ export interface User {
 
 export interface MutationGenqlSelection{
     createUser?: (UserGenqlSelection & { __args: {name: Scalars['String']} })
+    deleteUser?: (UserGenqlSelection & { __args: {id: Scalars['ID']} })
     __typename?: boolean | number
     __scalar?: boolean | number
 }

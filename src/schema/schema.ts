@@ -124,6 +124,24 @@ builder.mutationType({
         return user;
       },
     }),
+    deleteUser: t.field({
+      type: UserRef,
+      args: {
+        id: t.arg.id({ required: true }),
+      },
+      resolve: async (_, args) => {
+        const kv = await getKv();
+        const userRepo = getUserRepository(kv);
+
+        const user = await userRepo.getById(String(args.id));
+        if (!user) {
+          throw new Error(`User with id ${args.id} not found`);
+        }
+
+        await userRepo.delete(String(args.id));
+        return user;
+      },
+    }),
   }),
 });
 

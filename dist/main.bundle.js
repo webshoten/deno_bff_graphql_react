@@ -975,7 +975,7 @@ var require_react_development = __commonJS({
           }
           return lazyType;
         }
-        function forwardRef(render) {
+        function forwardRef2(render) {
           {
             if (render != null && render.$$typeof === REACT_MEMO_TYPE) {
               error2("forwardRef requires a render function but received a `memo` component. Instead of forwardRef(memo(...)), use memo(forwardRef(...)).");
@@ -1096,7 +1096,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useReducer(reducer, initialArg, init);
         }
-        function useRef2(initialValue) {
+        function useRef3(initialValue) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useRef(initialValue);
         }
@@ -1120,7 +1120,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useMemo(create, deps);
         }
-        function useImperativeHandle(ref, create, deps) {
+        function useImperativeHandle2(ref, create, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useImperativeHandle(ref, create, deps);
         }
@@ -1873,7 +1873,7 @@ var require_react_development = __commonJS({
         exports.createElement = createElement$1;
         exports.createFactory = createFactory;
         exports.createRef = createRef;
-        exports.forwardRef = forwardRef;
+        exports.forwardRef = forwardRef2;
         exports.isValidElement = isValidElement;
         exports.lazy = lazy2;
         exports.memo = memo;
@@ -1885,12 +1885,12 @@ var require_react_development = __commonJS({
         exports.useDeferredValue = useDeferredValue;
         exports.useEffect = useEffect2;
         exports.useId = useId;
-        exports.useImperativeHandle = useImperativeHandle;
+        exports.useImperativeHandle = useImperativeHandle2;
         exports.useInsertionEffect = useInsertionEffect;
         exports.useLayoutEffect = useLayoutEffect;
         exports.useMemo = useMemo2;
         exports.useReducer = useReducer;
-        exports.useRef = useRef2;
+        exports.useRef = useRef3;
         exports.useState = useState3;
         exports.useSyncExternalStore = useSyncExternalStore;
         exports.useTransition = useTransition;
@@ -24730,8 +24730,8 @@ var require_client = __commonJS({
 });
 
 // public/main.tsx
-var import_jsx_runtime2 = __toESM(require_jsx_runtime());
-var import_react2 = __toESM(require__());
+var import_jsx_runtime6 = __toESM(require_jsx_runtime());
+var import_react4 = __toESM(require__());
 var import_client = __toESM(require_client());
 
 // ../../../../Library/Caches/deno/npm/registry.npmjs.org/@0no-co/graphql.web/1.2.0/dist/graphql.web.mjs
@@ -27425,7 +27425,40 @@ function useQuery(e3) {
 }
 
 // public/App.tsx
+var import_jsx_runtime5 = __toESM(require_jsx_runtime());
+var import_react3 = __toESM(require__());
+
+// public/components/Header.tsx
 var import_jsx_runtime = __toESM(require_jsx_runtime());
+function Header() {
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+    className: "mb-8",
+    children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+        className: "text-3xl font-bold text-gray-900 mb-2",
+        children: "GraphQL API Test"
+      }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+        className: "text-sm text-gray-600",
+        children: [
+          "GraphQL endpoint:",
+          " ",
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+            href: "/graphql",
+            className: "text-blue-600 hover:text-blue-800 underline",
+            target: "_blank",
+            rel: "noopener noreferrer",
+            children: "/graphql"
+          })
+        ]
+      })
+    ]
+  });
+}
+
+// public/components/UserRegistrationForm.tsx
+var import_jsx_runtime2 = __toESM(require_jsx_runtime());
+var import_react = __toESM(require__());
 
 // public/generated/genql/runtime/generateGraphqlOperation.ts
 var parseRequest = (request, ctx, path) => {
@@ -27652,7 +27685,7 @@ var resolveConcreteTypes = (linkedTypeMap) => {
 var types_default = {
   "scalars": [
     1,
-    3,
+    2,
     5,
     7
   ],
@@ -27667,17 +27700,27 @@ var types_default = {
           ]
         }
       ],
+      "deleteUser": [
+        6,
+        {
+          "id": [
+            2,
+            "ID!"
+          ]
+        }
+      ],
       "__typename": [
         1
       ]
     },
     "String": {},
+    "ID": {},
     "Post": {
       "content": [
         1
       ],
       "id": [
-        3
+        2
       ],
       "title": [
         1
@@ -27686,13 +27729,12 @@ var types_default = {
         1
       ]
     },
-    "ID": {},
     "Query": {
       "post": [
-        2,
+        3,
         {
           "id": [
-            3,
+            2,
             "ID!"
           ]
         }
@@ -27701,13 +27743,13 @@ var types_default = {
         5
       ],
       "posts": [
-        2
+        3
       ],
       "user": [
         6,
         {
           "id": [
-            3,
+            2,
             "ID!"
           ]
         }
@@ -27725,7 +27767,7 @@ var types_default = {
     "Int": {},
     "User": {
       "id": [
-        3
+        2
       ],
       "name": [
         1
@@ -27795,25 +27837,9 @@ function useTypedMutation(opts) {
   ];
 }
 
-// public/App.tsx
-var import_react = __toESM(require__());
-function App() {
+// public/components/UserRegistrationForm.tsx
+function UserRegistrationForm({ onSuccess }) {
   const [name2, setName] = (0, import_react.useState)("");
-  const [result] = useTypedQuery({
-    query: {
-      users: {
-        id: true,
-        name: true
-      }
-    },
-    requestPolicy: "cache-and-network"
-  });
-  const [countResult, refetchCount] = useTypedQuery({
-    query: {
-      userCount: true
-    },
-    requestPolicy: "cache-and-network"
-  });
   const [mutationResult, executeMutation] = useTypedMutation({
     mutation: {
       createUser: {
@@ -27825,10 +27851,6 @@ function App() {
       }
     }
   });
-  const { data, fetching, error: error2 } = result;
-  const { data: countData, fetching: countFetching, error: countError } = countResult;
-  const users = data?.users?.filter((u3) => u3 !== null) ?? [];
-  const userCount = countData?.userCount ?? 0;
   const handleSubmit = async (e3) => {
     e3.preventDefault();
     if (!name2.trim()) return;
@@ -27837,195 +27859,271 @@ function App() {
         name: name2
       });
       setName("");
-      refetchCount({
-        requestPolicy: "network-only"
-      });
+      onSuccess?.();
     } catch (err) {
       console.error("\u30E6\u30FC\u30B6\u30FC\u767B\u9332\u30A8\u30E9\u30FC:", err);
     }
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-    className: "min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8",
-    children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-      className: "max-w-4xl mx-auto",
-      children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-          className: "mb-8",
-          children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
-              className: "text-3xl font-bold text-gray-900 mb-2",
-              children: "GraphQL API Test"
-            }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-              className: "text-sm text-gray-600",
+  return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", {
+    className: "bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6",
+    children: [
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h2", {
+        className: "text-xl font-semibold text-gray-900 mb-4",
+        children: "\u30E6\u30FC\u30B6\u30FC\u767B\u9332"
+      }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("form", {
+        onSubmit: handleSubmit,
+        className: "space-y-4",
+        children: [
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", {
+            className: "flex gap-3",
+            children: [
+              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("input", {
+                type: "text",
+                value: name2,
+                onChange: (e3) => setName(e3.target.value),
+                placeholder: "\u30E6\u30FC\u30B6\u30FC\u540D\u3092\u5165\u529B",
+                className: "flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors",
+                disabled: mutationResult.fetching
+              }),
+              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("button", {
+                type: "submit",
+                disabled: mutationResult.fetching || !name2.trim(),
+                className: "px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors",
+                children: mutationResult.fetching ? "\u767B\u9332\u4E2D..." : "\u767B\u9332"
+              })
+            ]
+          }),
+          mutationResult.error && /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", {
+            className: "p-3 bg-red-50 border border-red-200 rounded-lg",
+            children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("p", {
+              className: "text-sm text-red-800",
               children: [
-                "GraphQL endpoint:",
-                " ",
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-                  href: "/graphql",
-                  className: "text-blue-600 hover:text-blue-800 underline",
-                  target: "_blank",
-                  rel: "noopener noreferrer",
-                  children: "/graphql"
-                })
+                "\u30A8\u30E9\u30FC: ",
+                mutationResult.error.message
               ]
             })
-          ]
-        }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-          className: "bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6",
-          children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-              className: "text-xl font-semibold text-gray-900 mb-4",
-              children: "\u30E6\u30FC\u30B6\u30FC\u767B\u9332"
-            }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
-              onSubmit: handleSubmit,
-              className: "space-y-4",
+          }),
+          mutationResult.data && /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", {
+            className: "p-3 bg-green-50 border border-green-200 rounded-lg",
+            children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("p", {
+              className: "text-sm text-green-800",
               children: [
-                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-                  className: "flex gap-3",
-                  children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-                      type: "text",
-                      value: name2,
-                      onChange: (e3) => setName(e3.target.value),
-                      placeholder: "\u30E6\u30FC\u30B6\u30FC\u540D\u3092\u5165\u529B",
-                      className: "flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors",
-                      disabled: mutationResult.fetching
-                    }),
-                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-                      type: "submit",
-                      disabled: mutationResult.fetching || !name2.trim(),
-                      className: "px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors",
-                      children: mutationResult.fetching ? "\u767B\u9332\u4E2D..." : "\u767B\u9332"
-                    })
-                  ]
-                }),
-                mutationResult.error && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-                  className: "p-3 bg-red-50 border border-red-200 rounded-lg",
-                  children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-                    className: "text-sm text-red-800",
-                    children: [
-                      "\u30A8\u30E9\u30FC: ",
-                      mutationResult.error.message
-                    ]
+                "\u767B\u9332\u6210\u529F: ",
+                mutationResult.data.createUser?.name
+              ]
+            })
+          })
+        ]
+      })
+    ]
+  });
+}
+
+// public/components/UserCount.tsx
+var import_jsx_runtime3 = __toESM(require_jsx_runtime());
+var import_react2 = __toESM(require__());
+var UserCount = /* @__PURE__ */ (0, import_react2.forwardRef)((_props, ref) => {
+  const [countResult, refetchCount] = useTypedQuery({
+    query: {
+      userCount: true
+    },
+    requestPolicy: "cache-and-network"
+  });
+  (0, import_react2.useImperativeHandle)(ref, () => ({
+    refetch: () => {
+      refetchCount({
+        requestPolicy: "network-only"
+      });
+    }
+  }));
+  const { data: countData, fetching: countFetching, error: countError } = countResult;
+  const userCount = countData?.userCount ?? 0;
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", {
+    className: "bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6",
+    children: [
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", {
+        className: "text-xl font-semibold text-gray-900 mb-2",
+        children: "\u30E6\u30FC\u30B6\u30FC\u6570"
+      }),
+      countFetching ? /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", {
+        className: "flex items-center gap-2",
+        children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", {
+            className: "animate-spin rounded-full h-4 w-4 border-b-2 border-gray-900"
+          }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", {
+            className: "text-gray-600",
+            children: "\u8AAD\u307F\u8FBC\u307F\u4E2D..."
+          })
+        ]
+      }) : countError ? /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", {
+        className: "p-3 bg-red-50 border border-red-200 rounded-lg",
+        children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", {
+          className: "text-sm text-red-800",
+          children: [
+            "\u30A8\u30E9\u30FC: ",
+            countError.message
+          ]
+        })
+      }) : /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", {
+        className: "text-2xl font-bold text-gray-900",
+        children: [
+          userCount,
+          "\u4EBA"
+        ]
+      })
+    ]
+  });
+});
+
+// public/components/UserList.tsx
+var import_jsx_runtime4 = __toESM(require_jsx_runtime());
+function UserList({ userCountRef }) {
+  const [result, refetch] = useTypedQuery({
+    query: {
+      users: {
+        id: true,
+        name: true
+      }
+    },
+    requestPolicy: "cache-and-network"
+  });
+  const [deleteMutationResult, executeDeleteMutation] = useTypedMutation({
+    mutation: {
+      deleteUser: {
+        __args: {
+          id: ""
+        },
+        id: true,
+        name: true
+      }
+    }
+  });
+  const { data, fetching, error: error2 } = result;
+  const users = data?.users?.filter((u3) => u3 !== null) ?? [];
+  const handleDelete = async (userId) => {
+    try {
+      await executeDeleteMutation({
+        id: userId
+      });
+      refetch({
+        requestPolicy: "network-only"
+      });
+      userCountRef?.current?.refetch();
+    } catch (err) {
+      console.error("\u30E6\u30FC\u30B6\u30FC\u524A\u9664\u30A8\u30E9\u30FC:", err);
+      alert("\u30E6\u30FC\u30B6\u30FC\u306E\u524A\u9664\u306B\u5931\u6557\u3057\u307E\u3057\u305F");
+    }
+  };
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", {
+    className: "bg-white rounded-lg shadow-sm border border-gray-200 p-6",
+    children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("h2", {
+        className: "text-xl font-semibold text-gray-900 mb-4",
+        children: "\u30E6\u30FC\u30B6\u30FC\u4E00\u89A7"
+      }),
+      fetching ? /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", {
+        className: "flex items-center gap-2",
+        children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", {
+            className: "animate-spin rounded-full h-4 w-4 border-b-2 border-gray-900"
+          }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", {
+            className: "text-gray-600",
+            children: "\u8AAD\u307F\u8FBC\u307F\u4E2D..."
+          })
+        ]
+      }) : error2 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", {
+        className: "p-3 bg-red-50 border border-red-200 rounded-lg",
+        children: /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("p", {
+          className: "text-sm text-red-800",
+          children: [
+            "\u30A8\u30E9\u30FC: ",
+            error2.message
+          ]
+        })
+      }) : users.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", {
+        className: "text-gray-500 text-center py-8",
+        children: "\u30E6\u30FC\u30B6\u30FC\u304C\u767B\u9332\u3055\u308C\u3066\u3044\u307E\u305B\u3093"
+      }) : /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", {
+        className: "space-y-2",
+        children: users.map((user) => /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", {
+          className: "flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors",
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", {
+              className: "flex items-center gap-3",
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", {
+                  className: "w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center",
+                  children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", {
+                    className: "text-blue-600 font-medium text-sm",
+                    children: user.name?.charAt(0).toUpperCase() ?? "?"
                   })
                 }),
-                mutationResult.data && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-                  className: "p-3 bg-green-50 border border-green-200 rounded-lg",
-                  children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-                    className: "text-sm text-green-800",
-                    children: [
-                      "\u767B\u9332\u6210\u529F: ",
-                      mutationResult.data.createUser?.name
-                    ]
-                  })
-                })
-              ]
-            })
-          ]
-        }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-          className: "bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6",
-          children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-              className: "text-xl font-semibold text-gray-900 mb-2",
-              children: "\u30E6\u30FC\u30B6\u30FC\u6570"
-            }),
-            countFetching ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-              className: "flex items-center gap-2",
-              children: [
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-                  className: "animate-spin rounded-full h-4 w-4 border-b-2 border-gray-900"
-                }),
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-                  className: "text-gray-600",
-                  children: "\u8AAD\u307F\u8FBC\u307F\u4E2D..."
-                })
-              ]
-            }) : countError ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-              className: "p-3 bg-red-50 border border-red-200 rounded-lg",
-              children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-                className: "text-sm text-red-800",
-                children: [
-                  "\u30A8\u30E9\u30FC: ",
-                  countError.message
-                ]
-              })
-            }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-              className: "text-2xl font-bold text-gray-900",
-              children: [
-                userCount,
-                "\u4EBA"
-              ]
-            })
-          ]
-        }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-          className: "bg-white rounded-lg shadow-sm border border-gray-200 p-6",
-          children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-              className: "text-xl font-semibold text-gray-900 mb-4",
-              children: "\u30E6\u30FC\u30B6\u30FC\u4E00\u89A7"
-            }),
-            fetching ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-              className: "flex items-center gap-2",
-              children: [
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-                  className: "animate-spin rounded-full h-4 w-4 border-b-2 border-gray-900"
-                }),
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-                  className: "text-gray-600",
-                  children: "\u8AAD\u307F\u8FBC\u307F\u4E2D..."
-                })
-              ]
-            }) : error2 ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-              className: "p-3 bg-red-50 border border-red-200 rounded-lg",
-              children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-                className: "text-sm text-red-800",
-                children: [
-                  "\u30A8\u30E9\u30FC: ",
-                  error2.message
-                ]
-              })
-            }) : users.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-              className: "text-gray-500 text-center py-8",
-              children: "\u30E6\u30FC\u30B6\u30FC\u304C\u767B\u9332\u3055\u308C\u3066\u3044\u307E\u305B\u3093"
-            }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-              className: "space-y-2",
-              children: users.map((user) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-                className: "flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors",
-                children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-                  className: "flex items-center gap-3",
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", {
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-                      className: "w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center",
-                      children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-                        className: "text-blue-600 font-medium text-sm",
-                        children: user.name?.charAt(0).toUpperCase() ?? "?"
-                      })
+                    /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", {
+                      className: "font-medium text-gray-900",
+                      children: user.name ?? "Unknown"
                     }),
-                    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+                    /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("p", {
+                      className: "text-xs text-gray-500",
                       children: [
-                        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-                          className: "font-medium text-gray-900",
-                          children: user.name ?? "Unknown"
-                        }),
-                        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-                          className: "text-xs text-gray-500",
-                          children: [
-                            "ID: ",
-                            user.id
-                          ]
-                        })
+                        "ID: ",
+                        user.id
                       ]
                     })
                   ]
                 })
-              }, user.id))
+              ]
+            }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("button", {
+              type: "button",
+              onClick: () => handleDelete(user.id ?? ""),
+              disabled: deleteMutationResult.fetching,
+              className: "p-2 text-red-600 hover:text-red-700 hover:bg-red-50 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed",
+              title: "\u524A\u9664",
+              children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("svg", {
+                className: "w-5 h-5",
+                fill: "none",
+                stroke: "currentColor",
+                viewBox: "0 0 24 24",
+                children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("path", {
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  strokeWidth: 2,
+                  d: "M6 18L18 6M6 6l12 12"
+                })
+              })
             })
           ]
+        }, user.id))
+      })
+    ]
+  });
+}
+
+// public/App.tsx
+function App() {
+  const userCountRef = (0, import_react3.useRef)(null);
+  const handleUserCreated = () => {
+    userCountRef.current?.refetch();
+  };
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", {
+    className: "min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8",
+    children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", {
+      className: "max-w-4xl mx-auto",
+      children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Header, {}),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(UserRegistrationForm, {
+          onSuccess: handleUserCreated
+        }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(UserCount, {
+          ref: userCountRef
+        }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(UserList, {
+          userCountRef
         })
       ]
     })
@@ -28046,10 +28144,10 @@ if (!rootElement) {
   throw new Error("Root element not found");
 }
 var root = (0, import_client.createRoot)(rootElement);
-root.render(/* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_react2.StrictMode, {
-  children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(f2, {
+root.render(/* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_react4.StrictMode, {
+  children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(f2, {
     value: urqlClient,
-    children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(App_default, {})
+    children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(App_default, {})
   })
 }));
 /**
