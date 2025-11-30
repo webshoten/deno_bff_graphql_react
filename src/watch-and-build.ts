@@ -20,7 +20,7 @@ async function runBuild() {
     console.error("❌ ビルドエラー:", error);
   } finally {
     isBuilding = false;
-    
+
     // キューにビルドが残っている場合は再実行
     if (buildQueue) {
       await runBuild();
@@ -37,7 +37,7 @@ async function watchAndBuild() {
 
   console.log("📁 ファイル監視を開始しました");
   console.log("   監視対象:");
-  watchPaths.forEach(path => console.log(`   - ${path}`));
+  watchPaths.forEach((path) => console.log(`   - ${path}`));
 
   // 初回ビルドを実行
   console.log("🔄 初回ビルドを実行中...");
@@ -47,13 +47,13 @@ async function watchAndBuild() {
   for (const path of watchPaths) {
     try {
       const watcher = Deno.watchFs(path);
-      
+
       (async () => {
         for await (const event of watcher) {
           if (event.kind === "modify" || event.kind === "create") {
             console.log(`🔄 ファイル変更を検知: ${event.paths.join(", ")}`);
             // 少し待ってからビルド（ファイル書き込み完了を待つ）
-            await new Promise(resolve => setTimeout(resolve, 100));
+            await new Promise((resolve) => setTimeout(resolve, 100));
             await runBuild();
           }
         }
@@ -66,12 +66,11 @@ async function watchAndBuild() {
 
 if (import.meta.main) {
   // バックグラウンドでファイル監視を開始（非同期）
-  watchAndBuild().catch(error => {
+  watchAndBuild().catch((error) => {
     console.error("❌ ファイル監視エラー:", error);
   });
-  
+
   // サーバーを起動
   console.log("🚀 サーバーを起動中...");
   await import("./server.ts");
 }
-
