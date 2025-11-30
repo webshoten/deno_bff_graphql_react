@@ -2,7 +2,7 @@
 // スキーマをSDL形式に変換してファイルに出力
 
 import { printSchema } from "graphql";
-import { schema } from "./schema.ts";
+import { schema } from "../schema/schema.ts";
 
 // スキーマをSDL形式に変換
 function generateSchemaSDL() {
@@ -19,7 +19,7 @@ function generateSchemaSDL() {
 export async function generateSchemaSDLFile() {
   try {
     const sdl = generateSchemaSDL();
-    await Deno.writeTextFile("./schema.graphql", sdl);
+    await Deno.writeTextFile("./schema/schema.graphql", sdl);
     return sdl;
   } catch (error) {
     console.error("❌ SDL生成エラー:", error);
@@ -29,10 +29,9 @@ export async function generateSchemaSDLFile() {
 
 if (import.meta.main) {
   const sdl = generateSchemaSDL();
-  await Deno.writeTextFile("./schema.graphql", sdl);
-  console.log("✅ GraphQL SDLを生成しました: schema.graphql");
+  await Deno.writeTextFile("./schema/schema.graphql", sdl);
+  console.log("✅ GraphQL SDLを生成しました: schema/schema.graphql");
   console.log("   このファイルをgenqlで使用して型定義を生成できます");
 }
 
 export { generateSchemaSDL };
-

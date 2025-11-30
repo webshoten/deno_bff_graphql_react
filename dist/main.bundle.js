@@ -24,9 +24,9 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 ));
 
-// ../../../.cache/deno/npm/registry.npmjs.org/react/18.3.1/cjs/react.development.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/react/18.3.1/cjs/react.development.js
 var require_react_development = __commonJS({
-  "../../../.cache/deno/npm/registry.npmjs.org/react/18.3.1/cjs/react.development.js"(exports, module) {
+  "../../../../Library/Caches/deno/npm/registry.npmjs.org/react/18.3.1/cjs/react.development.js"(exports, module) {
     "use strict";
     if (true) {
       (function() {
@@ -1088,7 +1088,7 @@ var require_react_development = __commonJS({
           }
           return dispatcher.useContext(Context);
         }
-        function useState2(initialState) {
+        function useState3(initialState) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useState(initialState);
         }
@@ -1891,7 +1891,7 @@ var require_react_development = __commonJS({
         exports.useMemo = useMemo2;
         exports.useReducer = useReducer;
         exports.useRef = useRef2;
-        exports.useState = useState2;
+        exports.useState = useState3;
         exports.useSyncExternalStore = useSyncExternalStore;
         exports.useTransition = useTransition;
         exports.version = ReactVersion;
@@ -1903,9 +1903,9 @@ var require_react_development = __commonJS({
   }
 });
 
-// ../../../.cache/deno/npm/registry.npmjs.org/react/18.3.1/index.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/react/18.3.1/index.js
 var require__ = __commonJS({
-  "../../../.cache/deno/npm/registry.npmjs.org/react/18.3.1/index.js"(exports, module) {
+  "../../../../Library/Caches/deno/npm/registry.npmjs.org/react/18.3.1/index.js"(exports, module) {
     "use strict";
     if (false) {
       module.exports = null;
@@ -1915,9 +1915,9 @@ var require__ = __commonJS({
   }
 });
 
-// ../../../.cache/deno/npm/registry.npmjs.org/react/18.3.1/cjs/react-jsx-runtime.development.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/react/18.3.1/cjs/react-jsx-runtime.development.js
 var require_react_jsx_runtime_development = __commonJS({
-  "../../../.cache/deno/npm/registry.npmjs.org/react/18.3.1/cjs/react-jsx-runtime.development.js"(exports) {
+  "../../../../Library/Caches/deno/npm/registry.npmjs.org/react/18.3.1/cjs/react-jsx-runtime.development.js"(exports) {
     "use strict";
     if (true) {
       (function() {
@@ -2810,9 +2810,9 @@ var require_react_jsx_runtime_development = __commonJS({
   }
 });
 
-// ../../../.cache/deno/npm/registry.npmjs.org/react/18.3.1/jsx-runtime.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/react/18.3.1/jsx-runtime.js
 var require_jsx_runtime = __commonJS({
-  "../../../.cache/deno/npm/registry.npmjs.org/react/18.3.1/jsx-runtime.js"(exports, module) {
+  "../../../../Library/Caches/deno/npm/registry.npmjs.org/react/18.3.1/jsx-runtime.js"(exports, module) {
     "use strict";
     if (false) {
       module.exports = null;
@@ -2822,9 +2822,9 @@ var require_jsx_runtime = __commonJS({
   }
 });
 
-// ../../../.cache/deno/npm/registry.npmjs.org/scheduler/0.23.2/cjs/scheduler.development.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/scheduler/0.23.2/cjs/scheduler.development.js
 var require_scheduler_development = __commonJS({
-  "../../../.cache/deno/npm/registry.npmjs.org/scheduler/0.23.2/cjs/scheduler.development.js"(exports) {
+  "../../../../Library/Caches/deno/npm/registry.npmjs.org/scheduler/0.23.2/cjs/scheduler.development.js"(exports) {
     "use strict";
     if (true) {
       (function() {
@@ -3272,9 +3272,9 @@ var require_scheduler_development = __commonJS({
   }
 });
 
-// ../../../.cache/deno/npm/registry.npmjs.org/scheduler/0.23.2/index.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/scheduler/0.23.2/index.js
 var require__2 = __commonJS({
-  "../../../.cache/deno/npm/registry.npmjs.org/scheduler/0.23.2/index.js"(exports, module) {
+  "../../../../Library/Caches/deno/npm/registry.npmjs.org/scheduler/0.23.2/index.js"(exports, module) {
     "use strict";
     if (false) {
       module.exports = null;
@@ -3284,9 +3284,9 @@ var require__2 = __commonJS({
   }
 });
 
-// ../../../.cache/deno/npm/registry.npmjs.org/react-dom/18.3.1/cjs/react-dom.development.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/react-dom/18.3.1/cjs/react-dom.development.js
 var require_react_dom_development = __commonJS({
-  "../../../.cache/deno/npm/registry.npmjs.org/react-dom/18.3.1/cjs/react-dom.development.js"(exports) {
+  "../../../../Library/Caches/deno/npm/registry.npmjs.org/react-dom/18.3.1/cjs/react-dom.development.js"(exports) {
     "use strict";
     if (true) {
       (function() {
@@ -24685,9 +24685,9 @@ var require_react_dom_development = __commonJS({
   }
 });
 
-// ../../../.cache/deno/npm/registry.npmjs.org/react-dom/18.3.1/index.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/react-dom/18.3.1/index.js
 var require__3 = __commonJS({
-  "../../../.cache/deno/npm/registry.npmjs.org/react-dom/18.3.1/index.js"(exports, module) {
+  "../../../../Library/Caches/deno/npm/registry.npmjs.org/react-dom/18.3.1/index.js"(exports, module) {
     "use strict";
     if (false) {
       checkDCE();
@@ -24698,9 +24698,9 @@ var require__3 = __commonJS({
   }
 });
 
-// ../../../.cache/deno/npm/registry.npmjs.org/react-dom/18.3.1/client.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/react-dom/18.3.1/client.js
 var require_client = __commonJS({
-  "../../../.cache/deno/npm/registry.npmjs.org/react-dom/18.3.1/client.js"(exports) {
+  "../../../../Library/Caches/deno/npm/registry.npmjs.org/react-dom/18.3.1/client.js"(exports) {
     "use strict";
     var m = require__3();
     if (false) {
@@ -24731,10 +24731,10 @@ var require_client = __commonJS({
 
 // public/main.tsx
 var import_jsx_runtime2 = __toESM(require_jsx_runtime());
-var import_react = __toESM(require__());
+var import_react2 = __toESM(require__());
 var import_client = __toESM(require_client());
 
-// ../../../.cache/deno/npm/registry.npmjs.org/@0no-co/graphql.web/1.2.0/dist/graphql.web.mjs
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/@0no-co/graphql.web/1.2.0/dist/graphql.web.mjs
 var e = {
   NAME: "Name",
   DOCUMENT: "Document",
@@ -25411,7 +25411,7 @@ function print(e3) {
   return d = "\n", u[e3.kind] ? u[e3.kind](e3) : "";
 }
 
-// ../../../.cache/deno/npm/registry.npmjs.org/wonka/6.3.5/dist/wonka.mjs
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/wonka/6.3.5/dist/wonka.mjs
 var teardownPlaceholder = () => {
 };
 var e2 = teardownPlaceholder;
@@ -26013,7 +26013,7 @@ function toPromise(r3) {
   });
 }
 
-// ../../../.cache/deno/npm/registry.npmjs.org/@urql/core/6.0.1/dist/urql-core-chunk.mjs
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/@urql/core/6.0.1/dist/urql-core-chunk.mjs
 var rehydrateGraphQlError = (r3) => {
   if (r3 && "string" == typeof r3.message && (r3.extensions || "GraphQLError" === r3.name)) {
     return r3;
@@ -26620,7 +26620,7 @@ function makeFetchSource(e3, r3, t2) {
   })(filter((e4) => !!e4)(fromAsyncIterable(fetchOperation(e3, r3, t2))));
 }
 
-// ../../../.cache/deno/npm/registry.npmjs.org/@urql/core/6.0.1/dist/urql-core.mjs
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/@urql/core/6.0.1/dist/urql-core.mjs
 function withPromise(e3) {
   var source$ = (r3) => e3(r3);
   source$.toPromise = () => toPromise(take(1)(filter((e4) => !e4.stale && !e4.hasNext)(source$)));
@@ -26921,7 +26921,7 @@ var C = function Client(e3) {
 };
 var Q = C;
 
-// ../../../.cache/deno/npm/registry.npmjs.org/urql/5.0.1/dist/urql.es.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/urql/5.0.1/dist/urql.es.js
 var r2 = __toESM(require__());
 var c2 = {};
 var v2 = r2.createContext(c2);
@@ -26989,6 +26989,44 @@ function deferDispatch(e3, r3) {
   } else {
     Promise.resolve(r3).then(e3);
   }
+}
+function useMutation(i3) {
+  var s = r2.useRef(true);
+  var o2 = useClient();
+  var [c3, v3] = r2.useState(d3);
+  var f3 = r2.useCallback((r3, c4) => {
+    deferDispatch(v3, {
+      ...d3,
+      fetching: true
+    });
+    return toPromise(take(1)(filter((e3) => !e3.hasNext)(onPush((e3) => {
+      if (s.current) {
+        deferDispatch(v3, {
+          fetching: false,
+          stale: e3.stale,
+          data: e3.data,
+          error: e3.error,
+          extensions: e3.extensions,
+          operation: e3.operation,
+          hasNext: e3.hasNext
+        });
+      }
+    })(o2.executeMutation(createRequest(i3, r3), c4 || {})))));
+  }, [
+    o2,
+    i3,
+    v3
+  ]);
+  r2.useEffect(() => {
+    s.current = true;
+    return () => {
+      s.current = false;
+    };
+  }, []);
+  return [
+    c3,
+    f3
+  ];
 }
 function useRequest(t2, a2) {
   var n2 = r2.useRef(void 0);
@@ -27306,12 +27344,12 @@ var getFieldFromPath = (root2, path) => {
 };
 
 // public/generated/genql/runtime/linkTypeMap.ts
-var linkTypeMap = (typeMap2) => {
-  const indexToName = Object.assign({}, ...Object.keys(typeMap2.types).map((k, i3) => ({
+var linkTypeMap = (typeMap3) => {
+  const indexToName = Object.assign({}, ...Object.keys(typeMap3.types).map((k, i3) => ({
     [i3]: k
   })));
-  let intermediaryTypeMap = Object.assign({}, ...Object.keys(typeMap2.types || {}).map((k) => {
-    const type2 = typeMap2.types[k];
+  let intermediaryTypeMap = Object.assign({}, ...Object.keys(typeMap3.types || {}).map((k) => {
+    const type2 = typeMap3.types[k];
     const fields = type2 || {};
     return {
       [k]: {
@@ -27319,7 +27357,7 @@ var linkTypeMap = (typeMap2) => {
         // type scalar properties
         scalar: Object.keys(fields).filter((f3) => {
           const [type3] = fields[f3] || [];
-          const isScalar = type3 && typeMap2.scalars.includes(type3);
+          const isScalar = type3 && typeMap3.scalars.includes(type3);
           if (!isScalar) {
             return false;
           }
@@ -27406,17 +27444,32 @@ var resolveConcreteTypes = (linkedTypeMap) => {
 var types_default = {
   "scalars": [
     1,
-    2,
-    4,
-    6
+    3,
+    5,
+    7
   ],
   "types": {
+    "Mutation": {
+      "createUser": [
+        6,
+        {
+          "name": [
+            1,
+            "String!"
+          ]
+        }
+      ],
+      "__typename": [
+        1
+      ]
+    },
+    "String": {},
     "Post": {
       "content": [
         1
       ],
       "id": [
-        2
+        3
       ],
       "title": [
         1
@@ -27425,26 +27478,37 @@ var types_default = {
         1
       ]
     },
-    "String": {},
     "ID": {},
     "Query": {
-      "posts": [
-        0
-      ],
-      "user": [
-        5,
+      "post": [
+        2,
         {
           "id": [
-            2,
+            3,
+            "ID!"
+          ]
+        }
+      ],
+      "postCount": [
+        5
+      ],
+      "posts": [
+        2
+      ],
+      "user": [
+        6,
+        {
+          "id": [
+            3,
             "ID!"
           ]
         }
       ],
       "userCount": [
-        4
+        5
       ],
       "users": [
-        5
+        6
       ],
       "__typename": [
         1
@@ -27453,7 +27517,7 @@ var types_default = {
     "Int": {},
     "User": {
       "id": [
-        2
+        3
       ],
       "name": [
         1
@@ -27481,10 +27545,47 @@ function useTypedQuery(opts) {
     variables
   });
 }
+var typeMap2 = linkTypeMap(types_default);
+function useTypedMutation(opts) {
+  const operation = generateGraphqlOperation("mutation", typeMap2.Mutation, opts.mutation);
+  const [result, executeMutation] = useMutation(operation.query);
+  const execute = async (variables) => {
+    const operationWithVars = generateGraphqlOperation("mutation", typeMap2.Mutation, opts.mutation);
+    const finalVariables = {
+      ...operationWithVars.variables
+    };
+    if (variables && operationWithVars.variables) {
+      const varKeys = Object.keys(operationWithVars.variables);
+      varKeys.forEach((varKey) => {
+        const mutationKeys = Object.keys(opts.mutation);
+        if (mutationKeys.length > 0) {
+          const mutationField = opts.mutation[mutationKeys[0]];
+          if (mutationField && typeof mutationField === "object" && "__args" in mutationField && mutationField.__args && typeof mutationField.__args === "object") {
+            const argNames = Object.keys(mutationField.__args);
+            const varIndex = varKeys.indexOf(varKey);
+            if (varIndex >= 0 && varIndex < argNames.length) {
+              const argName = argNames[varIndex];
+              if (variables[argName] !== void 0) {
+                finalVariables[varKey] = variables[argName];
+              }
+            }
+          }
+        }
+      });
+    }
+    return executeMutation(finalVariables, opts.context);
+  };
+  return [
+    result,
+    execute
+  ];
+}
 
 // public/App.tsx
+var import_react = __toESM(require__());
 function App() {
-  const [result] = useTypedQuery({
+  const [name2, setName] = (0, import_react.useState)("");
+  const [result, refetch] = useTypedQuery({
     query: {
       users: {
         id: true,
@@ -27499,14 +27600,40 @@ function App() {
     },
     requestPolicy: "cache-and-network"
   });
+  const [mutationResult, executeMutation] = useTypedMutation({
+    mutation: {
+      createUser: {
+        __args: {
+          name: ""
+        },
+        id: true,
+        name: true
+      }
+    }
+  });
   const { data, fetching, error: error2 } = result;
   const { data: countData, fetching: countFetching, error: countError } = countResult;
   const users = data?.users?.filter((u3) => u3 !== null) ?? [];
   const userCount = countData?.userCount ?? 0;
+  const handleSubmit = async (e3) => {
+    e3.preventDefault();
+    if (!name2.trim()) return;
+    try {
+      await executeMutation({
+        name: name2
+      });
+      setName("");
+      refetch({
+        requestPolicy: "network-only"
+      });
+    } catch (err) {
+      console.error("\u30E6\u30FC\u30B6\u30FC\u767B\u9332\u30A8\u30E9\u30FC:", err);
+    }
+  };
   return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
     children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
-        children: "GraphQL API"
+        children: "GraphQL API TEST"
       }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
         children: [
@@ -27514,6 +27641,54 @@ function App() {
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
             href: "/graphql",
             children: "/graphql"
+          })
+        ]
+      }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+        children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+            children: "\u30E6\u30FC\u30B6\u30FC\u767B\u9332"
+          }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
+            onSubmit: handleSubmit,
+            children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+                type: "text",
+                value: name2,
+                onChange: (e3) => setName(e3.target.value),
+                placeholder: "\u30E6\u30FC\u30B6\u30FC\u540D\u3092\u5165\u529B",
+                style: {
+                  padding: "8px",
+                  marginRight: "8px"
+                }
+              }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+                type: "submit",
+                disabled: mutationResult.fetching || !name2.trim(),
+                style: {
+                  padding: "8px 16px"
+                },
+                children: mutationResult.fetching ? "\u767B\u9332\u4E2D..." : "\u767B\u9332"
+              })
+            ]
+          }),
+          mutationResult.error && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+            style: {
+              color: "red"
+            },
+            children: [
+              "\u30A8\u30E9\u30FC: ",
+              mutationResult.error.message
+            ]
+          }),
+          mutationResult.data && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+            style: {
+              color: "green"
+            },
+            children: [
+              "\u767B\u9332\u6210\u529F: ",
+              mutationResult.data.createUser?.name
+            ]
           })
         ]
       }),
@@ -27585,7 +27760,7 @@ if (!rootElement) {
   throw new Error("Root element not found");
 }
 var root = (0, import_client.createRoot)(rootElement);
-root.render(/* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_react.StrictMode, {
+root.render(/* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_react2.StrictMode, {
   children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(f2, {
     value: urqlClient,
     children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(App_default, {})

@@ -9,6 +9,11 @@ export type Scalars = {
     Boolean: boolean,
 }
 
+export interface Mutation {
+    createUser: (User | null)
+    __typename: 'Mutation'
+}
+
 export interface Post {
     content: (Scalars['String'] | null)
     id: (Scalars['ID'] | null)
@@ -17,6 +22,8 @@ export interface Post {
 }
 
 export interface Query {
+    post: (Post | null)
+    postCount: (Scalars['Int'] | null)
     posts: (Post[] | null)
     user: (User | null)
     userCount: (Scalars['Int'] | null)
@@ -30,6 +37,12 @@ export interface User {
     __typename: 'User'
 }
 
+export interface MutationGenqlSelection{
+    createUser?: (UserGenqlSelection & { __args: {name: Scalars['String']} })
+    __typename?: boolean | number
+    __scalar?: boolean | number
+}
+
 export interface PostGenqlSelection{
     content?: boolean | number
     id?: boolean | number
@@ -39,6 +52,8 @@ export interface PostGenqlSelection{
 }
 
 export interface QueryGenqlSelection{
+    post?: (PostGenqlSelection & { __args: {id: Scalars['ID']} })
+    postCount?: boolean | number
     posts?: PostGenqlSelection
     user?: (UserGenqlSelection & { __args: {id: Scalars['ID']} })
     userCount?: boolean | number
@@ -53,6 +68,14 @@ export interface UserGenqlSelection{
     __typename?: boolean | number
     __scalar?: boolean | number
 }
+
+
+    const Mutation_possibleTypes: string[] = ['Mutation']
+    export const isMutation = (obj?: { __typename?: any } | null): obj is Mutation => {
+      if (!obj?.__typename) throw new Error('__typename is missing in "isMutation"')
+      return Mutation_possibleTypes.includes(obj.__typename)
+    }
+    
 
 
     const Post_possibleTypes: string[] = ['Post']

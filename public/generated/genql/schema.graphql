@@ -1,3 +1,7 @@
+type Mutation {
+  createUser(name: String!): User
+}
+
 type Post {
   content: String
   id: ID
@@ -5,6 +9,8 @@ type Post {
 }
 
 type Query {
+  post(id: ID!): Post
+  postCount: Int
   posts: [Post!]
   user(id: ID!): User
   userCount: Int

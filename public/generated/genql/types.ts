@@ -1,17 +1,32 @@
 export default {
     "scalars": [
         1,
-        2,
-        4,
-        6
+        3,
+        5,
+        7
     ],
     "types": {
+        "Mutation": {
+            "createUser": [
+                6,
+                {
+                    "name": [
+                        1,
+                        "String!"
+                    ]
+                }
+            ],
+            "__typename": [
+                1
+            ]
+        },
+        "String": {},
         "Post": {
             "content": [
                 1
             ],
             "id": [
-                2
+                3
             ],
             "title": [
                 1
@@ -20,26 +35,37 @@ export default {
                 1
             ]
         },
-        "String": {},
         "ID": {},
         "Query": {
-            "posts": [
-                0
-            ],
-            "user": [
-                5,
+            "post": [
+                2,
                 {
                     "id": [
-                        2,
+                        3,
+                        "ID!"
+                    ]
+                }
+            ],
+            "postCount": [
+                5
+            ],
+            "posts": [
+                2
+            ],
+            "user": [
+                6,
+                {
+                    "id": [
+                        3,
                         "ID!"
                     ]
                 }
             ],
             "userCount": [
-                4
+                5
             ],
             "users": [
-                5
+                6
             ],
             "__typename": [
                 1
@@ -48,7 +74,7 @@ export default {
         "Int": {},
         "User": {
             "id": [
-                2
+                3
             ],
             "name": [
                 1

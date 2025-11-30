@@ -1,9 +1,10 @@
 import { Hono } from "hono";
 import { serveStatic } from "hono/deno";
 import { createYoga } from "graphql-yoga";
-import { schema } from "./schema.ts";
-import { generateSchemaSDLFile } from "./generate-schema.ts";
-import { generateGenQL } from "./generate-genql.ts";
+import { schema } from "./schema/schema.ts";
+import { generateSchemaSDLFile } from "./generate/generate-schema.ts";
+import { generateGenQL } from "./generate/generate-genql.ts";
+import { initializeData } from "./kv/index.ts";
 
 // Honoアプリケーション
 const app = new Hono();
@@ -14,12 +15,12 @@ let yoga = createYoga({
   graphqlEndpoint: "/graphql",
 });
 
-// スキーマを再読み込みする関数（Step 2）
+// スキーマを再読み込みする
 const reloadSchema = async () => {
   try {
     // モジュールキャッシュを回避するためにタイムスタンプを追加
     const timestamp = Date.now();
-    const schemaModule = await import(`./schema.ts?update=${timestamp}`);
+    const schemaModule = await import(`./schema/schema.ts?update=${timestamp}`);
 
     if (!schemaModule.schema) {
       throw new Error("スキーマが見つかりません");
@@ -36,7 +37,9 @@ const reloadSchema = async () => {
     // 型定義を自動生成
     try {
       console.log("🔄 型定義を自動生成中...");
+      // .graphqlファイルを生成
       await generateSchemaSDLFile();
+      // .graphqlをもとにgenqlを生成
       await generateGenQL();
       console.log("✅ 型定義の自動生成が完了しました");
     } catch (error) {
@@ -55,9 +58,10 @@ const reloadSchema = async () => {
 
 // スキーマファイルの監視（Step 1: ファイル監視の基本実装 + Step 2: 再読み込み）
 const watchSchemaFile = async () => {
-  const schemaPath = "./src/schema.ts";
+  const schemaPath = "./src/schema";
 
   try {
+    // Denoファイル監視APIを使用してスキーマファイル変更を監視
     const watcher = Deno.watchFs(schemaPath);
     console.log(`📁 スキーマファイルを監視中: ${schemaPath}`);
 
@@ -104,6 +108,9 @@ app.use("/*", async (c, next) => {
   // public/から配信
   return serveStatic({ root: "./public" })(c, next);
 });
+
+// 初期データを投入
+await initializeData();
 
 console.log("🚀 Deno 2.5 GraphQL listening: http://localhost:4000/graphql");
 console.log("📄 HTML endpoint: http://localhost:4000/");
