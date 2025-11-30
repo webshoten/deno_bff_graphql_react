@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { Provider, createClient, cacheExchange, fetchExchange } from "urql";
+import { cacheExchange, createClient, fetchExchange, Provider } from "urql";
 import App from "./App.tsx";
 
 // urqlクライアントを作成
@@ -20,6 +20,5 @@ root.render(
     <Provider value={urqlClient}>
       <App />
     </Provider>
-  </StrictMode>
+  </StrictMode>,
 );
-
