@@ -79,6 +79,7 @@ const typeMap = linkTypeMap(types as any);
 export function useTypedMutation<Mutation extends Record<string, any>>(opts: {
   mutation: Mutation;
   context?: Partial<OperationContext>;
+  additionalTypenames?: string[];
 }) {
   // クエリ文字列を生成（一度だけ）
   const operation = generateGraphqlOperation(
@@ -130,7 +131,15 @@ export function useTypedMutation<Mutation extends Record<string, any>>(opts: {
       });
     }
 
-    return executeMutation(finalVariables, opts.context);
+    // additionalTypenamesをcontextに追加
+    const context = {
+      ...opts.context,
+      ...(opts.additionalTypenames && {
+        additionalTypenames: opts.additionalTypenames,
+      }),
+    };
+
+    return executeMutation(finalVariables, context);
   };
 
   return [result, execute] as const;

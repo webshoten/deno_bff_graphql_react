@@ -24,9 +24,9 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 ));
 
-// ../../../.cache/deno/npm/registry.npmjs.org/react/18.3.1/cjs/react.development.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/react/18.3.1/cjs/react.development.js
 var require_react_development = __commonJS({
-  "../../../.cache/deno/npm/registry.npmjs.org/react/18.3.1/cjs/react.development.js"(exports, module) {
+  "../../../../Library/Caches/deno/npm/registry.npmjs.org/react/18.3.1/cjs/react.development.js"(exports, module) {
     "use strict";
     if (true) {
       (function() {
@@ -1903,9 +1903,9 @@ var require_react_development = __commonJS({
   }
 });
 
-// ../../../.cache/deno/npm/registry.npmjs.org/react/18.3.1/index.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/react/18.3.1/index.js
 var require__ = __commonJS({
-  "../../../.cache/deno/npm/registry.npmjs.org/react/18.3.1/index.js"(exports, module) {
+  "../../../../Library/Caches/deno/npm/registry.npmjs.org/react/18.3.1/index.js"(exports, module) {
     "use strict";
     if (false) {
       module.exports = null;
@@ -1915,9 +1915,9 @@ var require__ = __commonJS({
   }
 });
 
-// ../../../.cache/deno/npm/registry.npmjs.org/react/18.3.1/cjs/react-jsx-runtime.development.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/react/18.3.1/cjs/react-jsx-runtime.development.js
 var require_react_jsx_runtime_development = __commonJS({
-  "../../../.cache/deno/npm/registry.npmjs.org/react/18.3.1/cjs/react-jsx-runtime.development.js"(exports) {
+  "../../../../Library/Caches/deno/npm/registry.npmjs.org/react/18.3.1/cjs/react-jsx-runtime.development.js"(exports) {
     "use strict";
     if (true) {
       (function() {
@@ -2810,9 +2810,9 @@ var require_react_jsx_runtime_development = __commonJS({
   }
 });
 
-// ../../../.cache/deno/npm/registry.npmjs.org/react/18.3.1/jsx-runtime.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/react/18.3.1/jsx-runtime.js
 var require_jsx_runtime = __commonJS({
-  "../../../.cache/deno/npm/registry.npmjs.org/react/18.3.1/jsx-runtime.js"(exports, module) {
+  "../../../../Library/Caches/deno/npm/registry.npmjs.org/react/18.3.1/jsx-runtime.js"(exports, module) {
     "use strict";
     if (false) {
       module.exports = null;
@@ -2822,9 +2822,9 @@ var require_jsx_runtime = __commonJS({
   }
 });
 
-// ../../../.cache/deno/npm/registry.npmjs.org/scheduler/0.23.2/cjs/scheduler.development.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/scheduler/0.23.2/cjs/scheduler.development.js
 var require_scheduler_development = __commonJS({
-  "../../../.cache/deno/npm/registry.npmjs.org/scheduler/0.23.2/cjs/scheduler.development.js"(exports) {
+  "../../../../Library/Caches/deno/npm/registry.npmjs.org/scheduler/0.23.2/cjs/scheduler.development.js"(exports) {
     "use strict";
     if (true) {
       (function() {
@@ -3272,9 +3272,9 @@ var require_scheduler_development = __commonJS({
   }
 });
 
-// ../../../.cache/deno/npm/registry.npmjs.org/scheduler/0.23.2/index.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/scheduler/0.23.2/index.js
 var require__2 = __commonJS({
-  "../../../.cache/deno/npm/registry.npmjs.org/scheduler/0.23.2/index.js"(exports, module) {
+  "../../../../Library/Caches/deno/npm/registry.npmjs.org/scheduler/0.23.2/index.js"(exports, module) {
     "use strict";
     if (false) {
       module.exports = null;
@@ -3284,9 +3284,9 @@ var require__2 = __commonJS({
   }
 });
 
-// ../../../.cache/deno/npm/registry.npmjs.org/react-dom/18.3.1/cjs/react-dom.development.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/react-dom/18.3.1/cjs/react-dom.development.js
 var require_react_dom_development = __commonJS({
-  "../../../.cache/deno/npm/registry.npmjs.org/react-dom/18.3.1/cjs/react-dom.development.js"(exports) {
+  "../../../../Library/Caches/deno/npm/registry.npmjs.org/react-dom/18.3.1/cjs/react-dom.development.js"(exports) {
     "use strict";
     if (true) {
       (function() {
@@ -24685,9 +24685,9 @@ var require_react_dom_development = __commonJS({
   }
 });
 
-// ../../../.cache/deno/npm/registry.npmjs.org/react-dom/18.3.1/index.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/react-dom/18.3.1/index.js
 var require__3 = __commonJS({
-  "../../../.cache/deno/npm/registry.npmjs.org/react-dom/18.3.1/index.js"(exports, module) {
+  "../../../../Library/Caches/deno/npm/registry.npmjs.org/react-dom/18.3.1/index.js"(exports, module) {
     "use strict";
     if (false) {
       checkDCE();
@@ -24698,9 +24698,9 @@ var require__3 = __commonJS({
   }
 });
 
-// ../../../.cache/deno/npm/registry.npmjs.org/react-dom/18.3.1/client.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/react-dom/18.3.1/client.js
 var require_client = __commonJS({
-  "../../../.cache/deno/npm/registry.npmjs.org/react-dom/18.3.1/client.js"(exports) {
+  "../../../../Library/Caches/deno/npm/registry.npmjs.org/react-dom/18.3.1/client.js"(exports) {
     "use strict";
     var m = require__3();
     if (false) {
@@ -24734,7 +24734,7 @@ var import_jsx_runtime2 = __toESM(require_jsx_runtime());
 var import_react2 = __toESM(require__());
 var import_client = __toESM(require_client());
 
-// ../../../.cache/deno/npm/registry.npmjs.org/@0no-co/graphql.web/1.2.0/dist/graphql.web.mjs
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/@0no-co/graphql.web/1.2.0/dist/graphql.web.mjs
 var e = {
   NAME: "Name",
   DOCUMENT: "Document",
@@ -25411,7 +25411,7 @@ function print(e3) {
   return d = "\n", u[e3.kind] ? u[e3.kind](e3) : "";
 }
 
-// ../../../.cache/deno/npm/registry.npmjs.org/wonka/6.3.5/dist/wonka.mjs
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/wonka/6.3.5/dist/wonka.mjs
 var teardownPlaceholder = () => {
 };
 var e2 = teardownPlaceholder;
@@ -26013,7 +26013,7 @@ function toPromise(r3) {
   });
 }
 
-// ../../../.cache/deno/npm/registry.npmjs.org/@urql/core/6.0.1/dist/urql-core-chunk.mjs
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/@urql/core/6.0.1/dist/urql-core-chunk.mjs
 var rehydrateGraphQlError = (r3) => {
   if (r3 && "string" == typeof r3.message && (r3.extensions || "GraphQLError" === r3.name)) {
     return r3;
@@ -26620,7 +26620,98 @@ function makeFetchSource(e3, r3, t2) {
   })(filter((e4) => !!e4)(fromAsyncIterable(fetchOperation(e3, r3, t2))));
 }
 
-// ../../../.cache/deno/npm/registry.npmjs.org/@urql/core/6.0.1/dist/urql-core.mjs
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/@urql/core/6.0.1/dist/urql-core.mjs
+var collectTypes = (e3, r3) => {
+  if (Array.isArray(e3)) {
+    for (var t2 = 0, n2 = e3.length; t2 < n2; t2++) {
+      collectTypes(e3[t2], r3);
+    }
+  } else if ("object" == typeof e3 && null !== e3) {
+    for (var a2 in e3) {
+      if ("__typename" === a2 && "string" == typeof e3[a2]) {
+        r3.add(e3[a2]);
+      } else {
+        collectTypes(e3[a2], r3);
+      }
+    }
+  }
+  return r3;
+};
+var formatNode = (r3) => {
+  if ("definitions" in r3) {
+    var t2 = [];
+    for (var n2 = 0, a2 = r3.definitions.length; n2 < a2; n2++) {
+      var i3 = formatNode(r3.definitions[n2]);
+      t2.push(i3);
+    }
+    return {
+      ...r3,
+      definitions: t2
+    };
+  }
+  if ("directives" in r3 && r3.directives && r3.directives.length) {
+    var o2 = [];
+    var s = {};
+    for (var c3 = 0, u3 = r3.directives.length; c3 < u3; c3++) {
+      var p3 = r3.directives[c3];
+      var d4 = p3.name.value;
+      if ("_" !== d4[0]) {
+        o2.push(p3);
+      } else {
+        d4 = d4.slice(1);
+      }
+      s[d4] = p3;
+    }
+    r3 = {
+      ...r3,
+      directives: o2,
+      _directives: s
+    };
+  }
+  if ("selectionSet" in r3) {
+    var l3 = [];
+    var v3 = r3.kind === e.OPERATION_DEFINITION;
+    if (r3.selectionSet) {
+      for (var f3 = 0, h2 = r3.selectionSet.selections.length; f3 < h2; f3++) {
+        var k = r3.selectionSet.selections[f3];
+        v3 = v3 || k.kind === e.FIELD && "__typename" === k.name.value && !k.alias;
+        var y2 = formatNode(k);
+        l3.push(y2);
+      }
+      if (!v3) {
+        l3.push({
+          kind: e.FIELD,
+          name: {
+            kind: e.NAME,
+            value: "__typename"
+          },
+          _generated: true
+        });
+      }
+      return {
+        ...r3,
+        selectionSet: {
+          ...r3.selectionSet,
+          selections: l3
+        }
+      };
+    }
+  }
+  return r3;
+};
+var I = /* @__PURE__ */ new Map();
+var formatDocument = (e3) => {
+  var t2 = keyDocument(e3);
+  var n2 = I.get(t2.__key);
+  if (!n2) {
+    I.set(t2.__key, n2 = formatNode(t2));
+    Object.defineProperty(n2, "__key", {
+      value: t2.__key,
+      enumerable: false
+    });
+  }
+  return n2;
+};
 function withPromise(e3) {
   var source$ = (r3) => e3(r3);
   source$.toPromise = () => toPromise(take(1)(filter((e4) => !e4.stale && !e4.hasNext)(source$)));
@@ -26638,8 +26729,125 @@ function makeOperation(e3, r3, t2) {
     } : t2 || r3.context
   };
 }
+var addMetadata = (e3, r3) => makeOperation(e3.kind, e3, {
+  meta: {
+    ...e3.context.meta,
+    ...r3
+  }
+});
 var noop = () => {
 };
+var shouldSkip = ({ kind: e3 }) => "mutation" !== e3 && "query" !== e3;
+var mapTypeNames = (e3) => {
+  var r3 = formatDocument(e3.query);
+  if (r3 !== e3.query) {
+    var t2 = makeOperation(e3.kind, e3);
+    t2.query = r3;
+    return t2;
+  } else {
+    return e3;
+  }
+};
+var cacheExchange = ({ forward: e3, client: r3, dispatchDebug: t2 }) => {
+  var a2 = /* @__PURE__ */ new Map();
+  var i3 = /* @__PURE__ */ new Map();
+  var isOperationCached = (e4) => "query" === e4.kind && "network-only" !== e4.context.requestPolicy && ("cache-only" === e4.context.requestPolicy || a2.has(e4.key));
+  return (o2) => {
+    var s = map((e4) => {
+      var i4 = a2.get(e4.key);
+      t2({
+        operation: e4,
+        ...i4 ? {
+          type: "cacheHit",
+          message: "The result was successfully retrieved from the cache"
+        } : {
+          type: "cacheMiss",
+          message: "The result could not be retrieved from the cache"
+        },
+        source: "cacheExchange"
+      });
+      var o3 = i4 || makeResult(e4, {
+        data: null
+      });
+      o3 = {
+        ...o3,
+        operation: addMetadata(e4, {
+          cacheOutcome: i4 ? "hit" : "miss"
+        })
+      };
+      if ("cache-and-network" === e4.context.requestPolicy) {
+        o3.stale = true;
+        reexecuteOperation(r3, e4);
+      }
+      return o3;
+    })(filter((e4) => !shouldSkip(e4) && isOperationCached(e4))(o2));
+    var c3 = onPush((e4) => {
+      var { operation: n2 } = e4;
+      if (!n2) {
+        return;
+      }
+      var o3 = n2.context.additionalTypenames || [];
+      if ("subscription" !== e4.operation.kind) {
+        o3 = ((e5) => [
+          ...collectTypes(e5, /* @__PURE__ */ new Set())
+        ])(e4.data).concat(o3);
+      }
+      if ("mutation" === e4.operation.kind || "subscription" === e4.operation.kind) {
+        var s2 = /* @__PURE__ */ new Set();
+        t2({
+          type: "cacheInvalidation",
+          message: `The following typenames have been invalidated: ${o3}`,
+          operation: n2,
+          data: {
+            typenames: o3,
+            response: e4
+          },
+          source: "cacheExchange"
+        });
+        for (var c4 = 0; c4 < o3.length; c4++) {
+          var u3 = o3[c4];
+          var p3 = i3.get(u3);
+          if (!p3) {
+            i3.set(u3, p3 = /* @__PURE__ */ new Set());
+          }
+          for (var d4 of p3.values()) {
+            s2.add(d4);
+          }
+          p3.clear();
+        }
+        for (var l3 of s2.values()) {
+          if (a2.has(l3)) {
+            n2 = a2.get(l3).operation;
+            a2.delete(l3);
+            reexecuteOperation(r3, n2);
+          }
+        }
+      } else if ("query" === n2.kind && e4.data) {
+        a2.set(n2.key, e4);
+        for (var v3 = 0; v3 < o3.length; v3++) {
+          var f3 = o3[v3];
+          var h2 = i3.get(f3);
+          if (!h2) {
+            i3.set(f3, h2 = /* @__PURE__ */ new Set());
+          }
+          h2.add(n2.key);
+        }
+      }
+    })(e3(filter((e4) => "query" !== e4.kind || "cache-only" !== e4.context.requestPolicy)(map((e4) => addMetadata(e4, {
+      cacheOutcome: "miss"
+    }))(merge([
+      map(mapTypeNames)(filter((e4) => !shouldSkip(e4) && !isOperationCached(e4))(o2)),
+      filter((e4) => shouldSkip(e4))(o2)
+    ])))));
+    return merge([
+      s,
+      c3
+    ]);
+  };
+};
+var reexecuteOperation = (e3, r3) => e3.reexecuteOperation(makeOperation(r3.kind, r3, {
+  requestPolicy: "network-only"
+}));
 var fetchExchange = ({ forward: e3, dispatchDebug: r3 }) => (t2) => {
   var n2 = mergeMap((e4) => {
     var n3 = makeFetchBody(e4);
@@ -26921,7 +27129,7 @@ var C = function Client(e3) {
 };
 var Q = C;
 
-// ../../../.cache/deno/npm/registry.npmjs.org/urql/5.0.1/dist/urql.es.js
+// ../../../../Library/Caches/deno/npm/registry.npmjs.org/urql/5.0.1/dist/urql.es.js
 var r2 = __toESM(require__());
 var c2 = {};
 var v2 = r2.createContext(c2);
@@ -27573,7 +27781,13 @@ function useTypedMutation(opts) {
         }
       });
     }
-    return executeMutation(finalVariables, opts.context);
+    const context = {
+      ...opts.context,
+      ...opts.additionalTypenames && {
+        additionalTypenames: opts.additionalTypenames
+      }
+    };
+    return executeMutation(finalVariables, context);
   };
   return [
     result,
@@ -27585,7 +27799,7 @@ function useTypedMutation(opts) {
 var import_react = __toESM(require__());
 function App() {
   const [name2, setName] = (0, import_react.useState)("");
-  const [result, refetch] = useTypedQuery({
+  const [result] = useTypedQuery({
     query: {
       users: {
         id: true,
@@ -27594,7 +27808,7 @@ function App() {
     },
     requestPolicy: "cache-and-network"
   });
-  const [countResult] = useTypedQuery({
+  const [countResult, refetchCount] = useTypedQuery({
     query: {
       userCount: true
     },
@@ -27623,127 +27837,198 @@ function App() {
         name: name2
       });
       setName("");
-      refetch({
+      refetchCount({
         requestPolicy: "network-only"
       });
     } catch (err) {
       console.error("\u30E6\u30FC\u30B6\u30FC\u767B\u9332\u30A8\u30E9\u30FC:", err);
     }
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-    children: [
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
-        children: "GraphQL API TEST"
-      }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-        children: [
-          "GraphQL endpoint: ",
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-            href: "/graphql",
-            children: "/graphql"
-          })
-        ]
-      }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-        children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-            children: "\u30E6\u30FC\u30B6\u30FC\u767B\u9332"
-          }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
-            onSubmit: handleSubmit,
-            children: [
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-                type: "text",
-                value: name2,
-                onChange: (e3) => setName(e3.target.value),
-                placeholder: "\u30E6\u30FC\u30B6\u30FC\u540D\u3092\u5165\u529B",
-                style: {
-                  padding: "8px",
-                  marginRight: "8px"
-                }
-              }),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-                type: "submit",
-                disabled: mutationResult.fetching || !name2.trim(),
-                style: {
-                  padding: "8px 16px"
-                },
-                children: mutationResult.fetching ? "\u767B\u9332\u4E2D..." : "\u767B\u9332"
-              })
-            ]
-          }),
-          mutationResult.error && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-            style: {
-              color: "red"
-            },
-            children: [
-              "\u30A8\u30E9\u30FC: ",
-              mutationResult.error.message
-            ]
-          }),
-          mutationResult.data && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-            style: {
-              color: "green"
-            },
-            children: [
-              "\u767B\u9332\u6210\u529F: ",
-              mutationResult.data.createUser?.name
-            ]
-          })
-        ]
-      }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-        children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-            children: "\u30E6\u30FC\u30B6\u30FC\u4E00\u89A7"
-          }),
-          fetching ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-            children: "\u8AAD\u307F\u8FBC\u307F\u4E2D..."
-          }) : error2 ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-            style: {
-              color: "red"
-            },
-            children: [
-              "\u30A8\u30E9\u30FC: ",
-              error2.message
-            ]
-          }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-            children: users?.map((user) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+    className: "min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8",
+    children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+      className: "max-w-4xl mx-auto",
+      children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+          className: "mb-8",
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+              className: "text-3xl font-bold text-gray-900 mb-2",
+              children: "GraphQL API Test"
+            }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+              className: "text-sm text-gray-600",
               children: [
-                "ID: ",
-                user.id,
-                ", Name: ",
-                user.name
+                "GraphQL endpoint:",
+                " ",
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+                  href: "/graphql",
+                  className: "text-blue-600 hover:text-blue-800 underline",
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  children: "/graphql"
+                })
               ]
-            }, user.id))
-          })
-        ]
-      }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-        children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-            children: "\u30E6\u30FC\u30B6\u30FC\u6570"
-          }),
-          countFetching ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-            children: "\u8AAD\u307F\u8FBC\u307F\u4E2D..."
-          }) : countError ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-            style: {
-              color: "red"
-            },
-            children: [
-              "\u30A8\u30E9\u30FC: ",
-              countError.message
-            ]
-          }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-            children: [
-              "\u30E6\u30FC\u30B6\u30FC\u6570: ",
-              userCount,
-              "\u4EBA"
-            ]
-          })
-        ]
-      })
-    ]
+            })
+          ]
+        }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+          className: "bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6",
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+              className: "text-xl font-semibold text-gray-900 mb-4",
+              children: "\u30E6\u30FC\u30B6\u30FC\u767B\u9332"
+            }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
+              onSubmit: handleSubmit,
+              className: "space-y-4",
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+                  className: "flex gap-3",
+                  children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+                      type: "text",
+                      value: name2,
+                      onChange: (e3) => setName(e3.target.value),
+                      placeholder: "\u30E6\u30FC\u30B6\u30FC\u540D\u3092\u5165\u529B",
+                      className: "flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors",
+                      disabled: mutationResult.fetching
+                    }),
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+                      type: "submit",
+                      disabled: mutationResult.fetching || !name2.trim(),
+                      className: "px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors",
+                      children: mutationResult.fetching ? "\u767B\u9332\u4E2D..." : "\u767B\u9332"
+                    })
+                  ]
+                }),
+                mutationResult.error && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+                  className: "p-3 bg-red-50 border border-red-200 rounded-lg",
+                  children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+                    className: "text-sm text-red-800",
+                    children: [
+                      "\u30A8\u30E9\u30FC: ",
+                      mutationResult.error.message
+                    ]
+                  })
+                }),
+                mutationResult.data && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+                  className: "p-3 bg-green-50 border border-green-200 rounded-lg",
+                  children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+                    className: "text-sm text-green-800",
+                    children: [
+                      "\u767B\u9332\u6210\u529F: ",
+                      mutationResult.data.createUser?.name
+                    ]
+                  })
+                })
+              ]
+            })
+          ]
+        }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+          className: "bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6",
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+              className: "text-xl font-semibold text-gray-900 mb-2",
+              children: "\u30E6\u30FC\u30B6\u30FC\u6570"
+            }),
+            countFetching ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+              className: "flex items-center gap-2",
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+                  className: "animate-spin rounded-full h-4 w-4 border-b-2 border-gray-900"
+                }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+                  className: "text-gray-600",
+                  children: "\u8AAD\u307F\u8FBC\u307F\u4E2D..."
+                })
+              ]
+            }) : countError ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+              className: "p-3 bg-red-50 border border-red-200 rounded-lg",
+              children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+                className: "text-sm text-red-800",
+                children: [
+                  "\u30A8\u30E9\u30FC: ",
+                  countError.message
+                ]
+              })
+            }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+              className: "text-2xl font-bold text-gray-900",
+              children: [
+                userCount,
+                "\u4EBA"
+              ]
+            })
+          ]
+        }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+          className: "bg-white rounded-lg shadow-sm border border-gray-200 p-6",
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+              className: "text-xl font-semibold text-gray-900 mb-4",
+              children: "\u30E6\u30FC\u30B6\u30FC\u4E00\u89A7"
+            }),
+            fetching ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+              className: "flex items-center gap-2",
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+                  className: "animate-spin rounded-full h-4 w-4 border-b-2 border-gray-900"
+                }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+                  className: "text-gray-600",
+                  children: "\u8AAD\u307F\u8FBC\u307F\u4E2D..."
+                })
+              ]
+            }) : error2 ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+              className: "p-3 bg-red-50 border border-red-200 rounded-lg",
+              children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+                className: "text-sm text-red-800",
+                children: [
+                  "\u30A8\u30E9\u30FC: ",
+                  error2.message
+                ]
+              })
+            }) : users.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+              className: "text-gray-500 text-center py-8",
+              children: "\u30E6\u30FC\u30B6\u30FC\u304C\u767B\u9332\u3055\u308C\u3066\u3044\u307E\u305B\u3093"
+            }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+              className: "space-y-2",
+              children: users.map((user) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+                className: "flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors",
+                children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+                  className: "flex items-center gap-3",
+                  children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+                      className: "w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center",
+                      children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+                        className: "text-blue-600 font-medium text-sm",
+                        children: user.name?.charAt(0).toUpperCase() ?? "?"
+                      })
+                    }),
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+                      children: [
+                        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+                          className: "font-medium text-gray-900",
+                          children: user.name ?? "Unknown"
+                        }),
+                        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+                          className: "text-xs text-gray-500",
+                          children: [
+                            "ID: ",
+                            user.id
+                          ]
+                        })
+                      ]
+                    })
+                  ]
+                })
+              }, user.id))
+            })
+          ]
+        })
+      ]
+    })
   });
 }
 var App_default = App;
@@ -27752,6 +28037,7 @@ var App_default = App;
 var urqlClient = Q({
   url: "/graphql",
   exchanges: [
+    cacheExchange,
     fetchExchange
   ]
 });

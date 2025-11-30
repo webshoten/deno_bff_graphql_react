@@ -6,16 +6,13 @@ import { generateSchemaSDLFile } from "./generate/generate-schema.ts";
 import { generateGenQL } from "./generate/generate-genql.ts";
 import { initializeData } from "./kv/index.ts";
 
-// Honoアプリケーション
 const app = new Hono();
 
-// GraphQL Yogaの設定（動的に更新可能にするため変数として保持）
 let yoga = createYoga({
   schema,
   graphqlEndpoint: "/graphql",
 });
 
-// スキーマを再読み込みする
 const reloadSchema = async () => {
   try {
     // モジュールキャッシュを回避するためにタイムスタンプを追加

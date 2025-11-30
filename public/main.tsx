@@ -1,12 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { Provider, createClient, fetchExchange } from "urql";
+import { Provider, createClient, cacheExchange, fetchExchange } from "urql";
 import App from "./App.tsx";
 
 // urqlクライアントを作成
 const urqlClient = createClient({
   url: "/graphql",
-  exchanges: [fetchExchange],
+  exchanges: [cacheExchange, fetchExchange],
 });
 
 const rootElement = document.getElementById("app");
