@@ -112,13 +112,15 @@ app.use("/*", async (c, next) => {
 // 初期データを投入
 await initializeData();
 
-console.log("🚀 Deno 2.5 GraphQL listening: http://localhost:4000/graphql");
-console.log("📄 HTML endpoint: http://localhost:4000/");
+const port = parseInt(Deno.env.get("PORT") || "4000");
+
+console.log(`🚀 Deno 2.5 GraphQL listening: http://localhost:${port}/graphql`);
+console.log(`📄 HTML endpoint: http://localhost:${port}/`);
 
 // Deno のネイティブ Web サーバ API
 Deno.serve(
   {
-    port: 4000,
+    port,
   },
   app.fetch,
 );
