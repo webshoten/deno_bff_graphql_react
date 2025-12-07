@@ -1,16 +1,17 @@
+import { useEffect } from "react";
 import { useTypedQuery } from "../utils/genql-urql-bridge.ts";
 import type { QueryGenqlSelection } from "../generated/genql/schema.ts";
-import { forwardRef, useImperativeHandle } from "react";
 
 type UserCountQuery = {
   userCount: true;
 } & QueryGenqlSelection;
 
-export type UserCountRef = {
-  refetch: () => void;
+type Props = {
+  // 親コンポーネント（App）から渡される「再取得トリガー用のバージョン値」
+  version: number;
 };
 
-export const UserCount = forwardRef<UserCountRef>((_props, ref) => {
+export function UserCount({ version }: Props) {
   const [countResult, refetchCount] = useTypedQuery<UserCountQuery>({
     query: {
       userCount: true,
@@ -18,12 +19,10 @@ export const UserCount = forwardRef<UserCountRef>((_props, ref) => {
     requestPolicy: "cache-and-network",
   });
 
-  // refetchを外部から呼び出せるようにする
-  useImperativeHandle(ref, () => ({
-    refetch: () => {
-      refetchCount({ requestPolicy: "network-only" });
-    },
-  }));
+  // version の変化を検知して、ユーザー数を再取得
+  useEffect(() => {
+    refetchCount({ requestPolicy: "network-only" });
+  }, [version, refetchCount]);
 
   const { data: countData, fetching: countFetching, error: countError } =
     countResult;
@@ -57,4 +56,4 @@ export const UserCount = forwardRef<UserCountRef>((_props, ref) => {
         )}
     </div>
   );
-});
+}

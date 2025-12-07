@@ -1,6 +1,6 @@
+import { useEffect } from "react";
 import { useTypedMutation, useTypedQuery } from "../utils/genql-urql-bridge.ts";
 import type { QueryGenqlSelection } from "../generated/genql/schema.ts";
-import type { UserCountRef } from "./UserCount.tsx";
 
 type UsersQuery = {
   users: {
@@ -18,11 +18,14 @@ type DeleteUserMutation = {
 };
 
 type Props = {
-  userCountRef?: React.RefObject<UserCountRef>;
+  // 親コンポーネント（App）から渡される「再取得トリガー用のバージョン値」
+  version: number;
+  // ユーザーが追加・削除されたときに親へ通知するコールバック
+  onUserChanged?: () => void;
 };
 
-export function UserList({ userCountRef }: Props) {
-  const [result, refetch] = useTypedQuery<UsersQuery>({
+export function UserList({ version, onUserChanged }: Props) {
+  const [result, refetchUsers] = useTypedQuery<UsersQuery>({
     query: {
       users: {
         id: true,
@@ -47,13 +50,16 @@ export function UserList({ userCountRef }: Props) {
   const { data, fetching, error } = result;
   const users = data?.users?.filter((u) => u !== null) ?? [];
 
+  // version の変化を検知して、ユーザー一覧を再取得
+  useEffect(() => {
+    refetchUsers({ requestPolicy: "network-only" });
+  }, [version, refetchUsers]);
+
   const handleDelete = async (userId: string) => {
     try {
       await executeDeleteMutation({ id: userId });
-      // ユーザー一覧を再取得
-      refetch({ requestPolicy: "network-only" });
-      // ユーザー数も再取得
-      userCountRef?.current?.refetch();
+      // 親コンポーネントに「ユーザーが変化した」ことを通知（バージョンを進めてもらう）
+      onUserChanged?.();
     } catch (err) {
       console.error("ユーザー削除エラー:", err);
       alert("ユーザーの削除に失敗しました");
