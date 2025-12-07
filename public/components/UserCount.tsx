@@ -6,12 +6,7 @@ type UserCountQuery = {
   userCount: true;
 } & QueryGenqlSelection;
 
-type Props = {
-  // 親コンポーネント（App）から渡される「再取得トリガー用のバージョン値」
-  version: number;
-};
-
-export function UserCount({ version }: Props) {
+export function UserCount({ version }: { version: number }) {
   const [countResult, refetchCount] = useTypedQuery<UserCountQuery>({
     query: {
       userCount: true,
