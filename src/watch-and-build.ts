@@ -15,6 +15,7 @@ async function runBuild() {
   buildQueue = false;
 
   try {
+    // 開発時のビルド（deno task dev）では環境変数で --no-check を有効化して高速化
     await buildReactApp();
   } catch (error) {
     console.error("❌ ビルドエラー:", error);
@@ -46,23 +47,21 @@ async function watchAndBuild() {
   await runBuild();
 
   // ファイル監視を開始
-  for (const path of watchPaths) {
-    try {
-      const watcher = Deno.watchFs(path);
+  try {
+    const watcher = Deno.watchFs(watchPaths);
 
-      (async () => {
-        for await (const event of watcher) {
-          if (event.kind === "modify" || event.kind === "create") {
-            console.log(`🔄 ファイル変更を検知: ${event.paths.join(", ")}`);
-            // 少し待ってからビルド（ファイル書き込み完了を待つ）
-            await new Promise((resolve) => setTimeout(resolve, 100));
-            await runBuild();
-          }
+    (async () => {
+      for await (const event of watcher) {
+        if (event.kind === "modify" || event.kind === "create") {
+          console.log(`🔄 ファイル変更を検知: ${event.paths.join(", ")}`);
+          // 少し待ってからビルド（ファイル書き込み完了を待つ）
+          await new Promise((resolve) => setTimeout(resolve, 100));
+          await runBuild();
         }
-      })();
-    } catch (error) {
-      console.error(`❌ 監視エラー (${path}):`, error);
-    }
+      }
+    })();
+  } catch (error) {
+    console.error("❌ 監視エラー:", error);
   }
 }
 

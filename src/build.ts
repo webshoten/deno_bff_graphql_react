@@ -1,6 +1,7 @@
 // Reactアプリケーションを事前バンドルするスクリプト
 // ローカル環境で実行して、dist/main.bundle.js を生成
 
+// 環境変数 DENO_BUNDLE_NO_CHECK=1 のとき、--no-check で高速バンドル（主に dev 用）
 export async function buildReactApp() {
   try {
     const inputFile = "./public/main.tsx";
@@ -19,13 +20,17 @@ export async function buildReactApp() {
     console.log(`   出力: ${outputFile}`);
 
     // deno bundleコマンドを実行（出力ファイルを指定せず、標準出力をキャプチャ）
+    const noCheck = Deno.env.get("DENO_BUNDLE_NO_CHECK") === "1";
+    const args = [
+      "bundle",
+      ...(noCheck ? ["--no-check"] : []),
+      "--import-map",
+      "import_map.json",
+      inputFile,
+    ];
+
     const command = new Deno.Command(Deno.execPath(), {
-      args: [
-        "bundle",
-        "--import-map",
-        "import_map.json",
-        inputFile,
-      ],
+      args,
       stdout: "piped",
       stderr: "piped",
       cwd: Deno.cwd(),
@@ -55,6 +60,6 @@ export async function buildReactApp() {
 }
 
 if (import.meta.main) {
+  // 本番ビルド（deno task build）では通常どおり型チェックありでバンドル
   await buildReactApp();
 }
-
