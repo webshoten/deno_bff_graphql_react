@@ -17,14 +17,17 @@ type DeleteUserMutation = {
   };
 };
 
-type Props = {
-  // 親コンポーネント（App）から渡される「再取得トリガー用のバージョン値」
-  version: number;
-  // ユーザーが追加・削除されたときに親へ通知するコールバック
-  onUserChanged?: () => void;
-};
-
-export function UserList({ version, onUserChanged }: Props) {
+export function UserList(
+  {
+    version,
+    onUserChanged,
+  }: {
+    // 親コンポーネント（App）から渡される「再取得トリガー用のバージョン値」
+    version: number;
+    // ユーザーが追加・削除されたときに親へ通知するコールバック
+    onUserChanged?: () => void;
+  },
+) {
   const [result, refetchUsers] = useTypedQuery<UsersQuery>({
     query: {
       users: {
