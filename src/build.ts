@@ -20,9 +20,11 @@ export async function buildReactApp() {
     console.log(`   出力: ${outputFile}`);
 
     // deno bundleコマンドを実行（出力ファイルを指定せず、標準出力をキャプチャ）
+    // --sourcemap=inline を付けて、bundle 内にソースマップを埋め込む
     const noCheck = Deno.env.get("DENO_BUNDLE_NO_CHECK") === "1";
     const args = [
       "bundle",
+      "--sourcemap=inline",
       ...(noCheck ? ["--no-check"] : []),
       "--import-map",
       "import_map.json",

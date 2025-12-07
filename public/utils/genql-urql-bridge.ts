@@ -88,8 +88,6 @@ export function useTypedMutation<Mutation extends Record<string, any>>(opts: {
     opts.mutation as any,
   );
 
-  debugger;
-
   // useMutationにはクエリ文字列を直接渡す
   const [result, executeMutation] = useMutation(operation.query);
 
