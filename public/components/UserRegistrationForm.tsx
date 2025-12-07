@@ -35,7 +35,7 @@ export function UserRegistrationForm({ onSuccess }: Props) {
     if (!name.trim()) return;
 
     try {
-      await executeMutation({ name });
+      executeMutation({ name });
       setName("");
       onSuccess?.();
     } catch (err) {

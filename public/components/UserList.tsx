@@ -60,7 +60,7 @@ export function UserList(
 
   const handleDelete = async (userId: string) => {
     try {
-      await executeDeleteMutation({ id: userId });
+      executeDeleteMutation({ id: userId });
       // 親コンポーネントに「ユーザーが変化した」ことを通知（バージョンを進めてもらう）
       onUserChanged?.();
     } catch (err) {
