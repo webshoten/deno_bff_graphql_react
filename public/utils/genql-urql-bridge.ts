@@ -15,7 +15,7 @@ import type {
   QueryGenqlSelection,
 } from "../generated/genql/schema.ts";
 import type { OperationContext } from "urql";
-import { useClient, useMutation, useQuery } from "urql";
+import { useMutation, useQuery } from "urql";
 import {
   Args,
   Fields,
@@ -51,29 +51,6 @@ export function useTypedQuery<Query extends QueryGenqlSelection>(opts: {
     query,
     variables,
   });
-}
-
-/**
- * executeTypedQuery
- *
- * 役割: フックを使わない（関数的な）単発実行ユーティリティ。
- * 使い所: ハンドラ内で 1 回だけ実行したい場合など。
- */
-export async function executeTypedQuery<Query extends QueryGenqlSelection>(
-  client: ReturnType<typeof useClient>,
-  query: Query,
-  opts?: Partial<OperationContext>,
-) {
-  const { query: queryString, variables } = generateQueryOp(query);
-
-  const result = await client.query(queryString, variables || {}, opts)
-    .toPromise();
-
-  if (result.error) {
-    throw result.error;
-  }
-
-  return result.data as QueryResult<Query> | undefined;
 }
 
 const typeMap = linkTypeMap(types as any);
