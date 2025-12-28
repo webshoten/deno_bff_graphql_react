@@ -9,14 +9,6 @@ type UsersQuery = {
   };
 } & QueryGenqlSelection;
 
-type DeleteUserMutation = {
-  deleteUser: {
-    __args: { id: string };
-    id: true;
-    name: true;
-  };
-};
-
 export function UserList() {
   const [result, refetchUsers] = useTypedQuery<UsersQuery>({
     query: {
@@ -28,9 +20,7 @@ export function UserList() {
     requestPolicy: "cache-and-network",
   });
 
-  const [deleteMutationResult, executeDeleteMutation] = useTypedMutation<
-    DeleteUserMutation
-  >({
+  const [deleteMutationResult, executeDeleteMutation] = useTypedMutation({
     mutation: {
       deleteUser: {
         __args: { id: "" },

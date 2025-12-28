@@ -1,24 +1,10 @@
 import { useState } from "react";
 import { useTypedMutation } from "../utils/genql-urql-bridge.ts";
 
-type CreateUserMutation = {
-  createUser: {
-    __args: { name: string };
-    id: true;
-    name: true;
-  };
-};
-
-type Props = {
-  onSuccess?: () => void;
-};
-
 export function UserRegistrationForm() {
   const [name, setName] = useState("");
 
-  const [mutationResult, executeMutation] = useTypedMutation<
-    CreateUserMutation
-  >(
+  const [mutationResult, executeMutation] = useTypedMutation(
     {
       mutation: {
         createUser: {
@@ -30,7 +16,7 @@ export function UserRegistrationForm() {
     },
   );
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim()) return;
 
@@ -69,13 +55,6 @@ export function UserRegistrationForm() {
           <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
             <p className="text-sm text-red-800">
               エラー: {mutationResult.error.message}
-            </p>
-          </div>
-        )}
-        {mutationResult.data && (
-          <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
-            <p className="text-sm text-green-800">
-              登録成功: {mutationResult.data.createUser?.name}
             </p>
           </div>
         )}

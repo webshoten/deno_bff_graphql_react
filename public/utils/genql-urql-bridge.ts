@@ -8,12 +8,19 @@
  * - graphql-codegen は使わず、GenQL の生成物のみを依存対象にする
  */
 
-import type { QueryResult } from "../generated/genql/index.ts";
+import type { MutationResult, QueryResult } from "../generated/genql/index.ts";
 import { generateQueryOp } from "../generated/genql/index.ts";
-import type { QueryGenqlSelection } from "../generated/genql/schema.ts";
+import type {
+  MutationGenqlSelection,
+  QueryGenqlSelection,
+} from "../generated/genql/schema.ts";
 import type { OperationContext } from "urql";
 import { useClient, useMutation, useQuery } from "urql";
-import { generateGraphqlOperation } from "../generated/genql/runtime/generateGraphqlOperation.ts";
+import {
+  Args,
+  Fields,
+  generateGraphqlOperation,
+} from "../generated/genql/runtime/generateGraphqlOperation.ts";
 import { linkTypeMap } from "../generated/genql/runtime/linkTypeMap.ts";
 import types from "../generated/genql/types.ts";
 
@@ -76,11 +83,13 @@ const typeMap = linkTypeMap(types as any);
  *
  * 役割: GenQL の selection から Mutation を実行するためのフック
  */
-export function useTypedMutation<Mutation extends Record<string, any>>(opts: {
-  mutation: Mutation;
-  context?: Partial<OperationContext>;
-  additionalTypenames?: string[];
-}) {
+export function useTypedMutation<Mutation extends MutationGenqlSelection>(
+  opts: {
+    mutation: Mutation;
+    context?: Partial<OperationContext>;
+    additionalTypenames?: string[];
+  },
+) {
   // クエリ文字列を生成（一度だけ）
   const operation = generateGraphqlOperation(
     "mutation",
@@ -89,14 +98,16 @@ export function useTypedMutation<Mutation extends Record<string, any>>(opts: {
   );
 
   // useMutationにはクエリ文字列を直接渡す
-  const [result, executeMutation] = useMutation(operation.query);
+  const [result, executeMutation] = useMutation<MutationResult<Mutation>>(
+    operation.query,
+  );
 
-  const execute = async (variables?: Record<string, any>) => {
+  const execute = (variables?: Args) => {
     // 変数を再生成して、実行時に渡された値で上書き
     const operationWithVars = generateGraphqlOperation(
       "mutation",
       typeMap.Mutation!,
-      opts.mutation as any,
+      opts.mutation as unknown as Fields,
     );
 
     // 実行時に渡された変数で上書き
@@ -112,7 +123,8 @@ export function useTypedMutation<Mutation extends Record<string, any>>(opts: {
         // 簡易的な実装: mutationの__argsのキーを順番にマッピング
         const mutationKeys = Object.keys(opts.mutation);
         if (mutationKeys.length > 0) {
-          const mutationField = opts.mutation[mutationKeys[0]];
+          const mutationField =
+            (opts.mutation as Record<string, unknown>)[mutationKeys[0]];
           if (
             mutationField && typeof mutationField === "object" &&
             "__args" in mutationField && mutationField.__args &&

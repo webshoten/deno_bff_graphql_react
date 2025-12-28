@@ -53,14 +53,6 @@ builder.queryType({
         return await userRepo.getById(String(args.id));
       },
     }),
-    userCount: t.field({
-      type: "Int",
-      resolve: async () => {
-        const kv = await getKv();
-        const userRepo = getUserRepository(kv);
-        return await userRepo.count();
-      },
-    }),
     posts: t.field({
       type: [PostRef],
       resolve: async () => {
