@@ -10,7 +10,7 @@ type UsersQuery = {
 } & QueryGenqlSelection;
 
 export function UserList() {
-  const [result, refetchUsers] = useTypedQuery<UsersQuery>({
+  const [result] = useTypedQuery<UsersQuery>({
     query: {
       users: {
         id: true,
