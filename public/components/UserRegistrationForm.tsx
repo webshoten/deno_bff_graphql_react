@@ -13,6 +13,7 @@ export function UserRegistrationForm() {
           name: true,
         },
       },
+      additionalTypenames: ["User"],
     },
   );
 
@@ -21,7 +22,9 @@ export function UserRegistrationForm() {
     if (!name.trim()) return;
 
     try {
-      executeMutation({ name });
+      executeMutation(
+        { name },
+      );
       setName("");
     } catch (err) {
       console.error("ユーザー登録エラー:", err);

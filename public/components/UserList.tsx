@@ -15,6 +15,7 @@ export function UserList() {
       users: {
         id: true,
         name: true,
+        __typename: true,
       },
     },
     requestPolicy: "cache-and-network",
