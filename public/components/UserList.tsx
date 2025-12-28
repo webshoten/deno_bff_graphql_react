@@ -17,17 +17,7 @@ type DeleteUserMutation = {
   };
 };
 
-export function UserList(
-  {
-    version,
-    onUserChanged,
-  }: {
-    // 親コンポーネント（App）から渡される「再取得トリガー用のバージョン値」
-    version: number;
-    // ユーザーが追加・削除されたときに親へ通知するコールバック
-    onUserChanged?: () => void;
-  },
-) {
+export function UserList() {
   const [result, refetchUsers] = useTypedQuery<UsersQuery>({
     query: {
       users: {
@@ -53,16 +43,9 @@ export function UserList(
   const { data, fetching, error } = result;
   const users = data?.users?.filter((u) => u !== null) ?? [];
 
-  // version の変化を検知して、ユーザー一覧を再取得
-  useEffect(() => {
-    refetchUsers({ requestPolicy: "network-only" });
-  }, [version, refetchUsers]);
-
   const handleDelete = async (userId: string) => {
     try {
       executeDeleteMutation({ id: userId });
-      // 親コンポーネントに「ユーザーが変化した」ことを通知（バージョンを進めてもらう）
-      onUserChanged?.();
     } catch (err) {
       console.error("ユーザー削除エラー:", err);
       alert("ユーザーの削除に失敗しました");

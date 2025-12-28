@@ -13,7 +13,7 @@ type Props = {
   onSuccess?: () => void;
 };
 
-export function UserRegistrationForm({ onSuccess }: Props) {
+export function UserRegistrationForm() {
   const [name, setName] = useState("");
 
   const [mutationResult, executeMutation] = useTypedMutation<
@@ -37,7 +37,6 @@ export function UserRegistrationForm({ onSuccess }: Props) {
     try {
       executeMutation({ name });
       setName("");
-      onSuccess?.();
     } catch (err) {
       console.error("ユーザー登録エラー:", err);
     }

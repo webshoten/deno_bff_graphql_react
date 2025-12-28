@@ -6,18 +6,13 @@ type UserCountQuery = {
   userCount: true;
 } & QueryGenqlSelection;
 
-export function UserCount({ version }: { version: number }) {
+export function UserCount() {
   const [countResult, refetchCount] = useTypedQuery<UserCountQuery>({
     query: {
       userCount: true,
     },
     requestPolicy: "cache-and-network",
   });
-
-  // version の変化を検知して、ユーザー数を再取得
-  useEffect(() => {
-    refetchCount({ requestPolicy: "network-only" });
-  }, [version, refetchCount]);
 
   const { data: countData, fetching: countFetching, error: countError } =
     countResult;
